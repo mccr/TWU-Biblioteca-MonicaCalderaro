@@ -80,11 +80,20 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldDetectInvalidOption() {
-        this.inputMock("2");
+        this.inputMock("6");
 
         app.mainMenu();
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("Select a valid option!"));
 
+    }
+
+    @Test
+    public void shouldBeAbleToQuit() {
+        this.inputMock("2");
+
+        app.mainMenu();
+
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("You just Quit, GoodBye"));
     }
 }

@@ -37,8 +37,13 @@ public class BibliotecaApp {
                 System.out.println(result);
                 break;
 
+            case 2:
+                System.out.println("You just Quit, GoodBye");
+                break;
+
             default:
                 System.out.println("Select a valid option!");
+                this.mainMenu();
                 break;
         }
     }
