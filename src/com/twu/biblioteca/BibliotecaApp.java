@@ -1,9 +1,11 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BibliotecaApp {
-    Librarian librarian;
+    private Librarian librarian;
+    private ArrayList<Book> booksAvailable = Librarian.getBooks();
 
     public BibliotecaApp(Librarian librarian) {
         this.librarian = librarian;
@@ -49,7 +51,7 @@ public class BibliotecaApp {
         switch (Integer.parseInt(choice)) {
             case 1:
 
-                for (Book book : librarian.getBooks()) {
+                for (Book book : booksAvailable) {
                     if (book.isAvailable) System.out.println(book.title);
                 }
                 break;
@@ -59,16 +61,17 @@ public class BibliotecaApp {
                 break;
 
             case 3:
-                System.out.println("Thank you! Enjoy the book");
+                librarian.checkout(booksAvailable.get(0));
                 break;
 
             case 4:
-                System.out.println("Thank you for returning the book.");
+                librarian.returns(booksAvailable.get(0));
                 break;
 
             default:
                 System.out.println("Select a valid option!");
                 break;
         }
+        System.out.println(booksAvailable.get(0).isAvailable);
     }
 }

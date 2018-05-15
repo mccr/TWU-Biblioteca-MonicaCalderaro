@@ -12,7 +12,7 @@ public class Librarian {
     }
 
     public void checkout(Book book) {
-        if (book.isAvailable == true) {
+        if (book.isAvailable) {
             book.isAvailable = false;
             System.out.println("Thank you! Enjoy the book");
         } else {
@@ -22,7 +22,7 @@ public class Librarian {
     }
 
     public void returns(Book book) {
-        if (book.isAvailable == false) {
+        if (!book.isAvailable) {
             book.isAvailable = true;
             System.out.println("Thank you for returning the book.");
         } else {
