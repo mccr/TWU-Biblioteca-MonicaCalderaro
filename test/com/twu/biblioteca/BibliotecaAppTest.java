@@ -20,13 +20,19 @@ public class BibliotecaAppTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
+    public void inputMock() {
+        String input = "1";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+    }
+
     @Before
     public void setUpStreams() {
         System.setOut(new PrintStream(outContent));
     }
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         app = new BibliotecaApp();
     }
 
@@ -42,25 +48,31 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldPrintAMainMenuOptionsAndReceiveInputOptionAndPrintTheResultOfTheChoice() {
+    public void shouldPrintAMainMenuOptions() {
         String message = "1.Book List\n2.Quit";
-        String result = "book\nbook\nbook\nbook\nbook\nbook";
 
-        String input = "1";
-        InputStream in = new ByteArrayInputStream(input.getBytes());
-        System.setIn(in);
+        this.inputMock();
 
         app.mainMenu();
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString(message));
-        assertThat(outContent.toString().trim(), CoreMatchers.containsString(result));
     }
 
     @Test
+    public void mainMenuShouldReceiveInputFromUserAndPrintResultOfChoice() {
+        String result = "book\nbook\nbook\nbook\nbook\nbook";
+
+        this.inputMock();
+
+        app.mainMenu();
+
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString(result));
+    }
+
+
+    @Test
     public void shouldReceiveInputFromUser() {
-        String input = "1";
-        InputStream in = new ByteArrayInputStream(input.getBytes());
-        System.setIn(in);
+        this.inputMock();
 
         app.inputUser();
 

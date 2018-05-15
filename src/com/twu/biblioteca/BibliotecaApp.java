@@ -21,7 +21,6 @@ public class BibliotecaApp {
         System.out.println(menu);
 
         String option = this.inputUser();
-        System.out.println(option);
 
         switch (Integer.parseInt(option)) {
             case 1:
