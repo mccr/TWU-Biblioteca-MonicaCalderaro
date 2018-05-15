@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -8,32 +10,37 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
+
 public class BibliotecaAppTest {
+    BibliotecaApp app;
 
-    private OutputStream prepareRedirectOutputForTests(){
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
-        OutputStream outputStream = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(outputStream);
-        System.setOut(ps);
-        return outputStream;
+    @Before
+    public void setUpStreams() {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @Before
+    public void setUp() throws Exception {
+        app = new BibliotecaApp();
+    }
+
+    @After
+    public void restoreStreams() {
+        System.setOut(System.out);
     }
 
     @Test
     public void shouldReturnAWelcomeMessage() {
-        // Given
-        BibliotecaApp app = new BibliotecaApp();
-        // When
-        String outputMessage = app.welcomeMessage();
-        // Then
-        assertEquals("welcome user", outputMessage);
+        app.welcomeMessage();
+        assertEquals("welcome user", outContent.toString().trim());
     }
 
     @Test
     public void shouldPrintAMainMenuOptions() {
-        OutputStream outputStream = prepareRedirectOutputForTests();
-        BibliotecaApp app = new BibliotecaApp();
         String message = "Welcome to the main menu \n1.Book List\n2.Quit";
         app.mainMenu();
-        assertEquals(message, outputStream.toString().trim());
+        assertEquals(message, outContent.toString().trim());
     }
 }

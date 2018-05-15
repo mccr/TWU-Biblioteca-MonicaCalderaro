@@ -4,11 +4,11 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         BibliotecaApp library = new BibliotecaApp();
-        System.out.println(library.welcomeMessage());
+        library.welcomeMessage();
     }
 
-    public String welcomeMessage() {
-        return "welcome user";
+    public void welcomeMessage() {
+        System.out.println("welcome user");
     }
 
 
