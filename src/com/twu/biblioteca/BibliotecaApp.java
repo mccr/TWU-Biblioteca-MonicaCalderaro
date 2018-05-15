@@ -35,6 +35,11 @@ public class BibliotecaApp {
                     }
                 }
                 System.out.println(result);
+                break;
+
+            default:
+                System.out.println("Select a valid option!");
+                break;
         }
     }
 

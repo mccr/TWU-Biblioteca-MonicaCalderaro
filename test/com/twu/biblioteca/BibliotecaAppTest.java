@@ -20,8 +20,7 @@ public class BibliotecaAppTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
-    public void inputMock() {
-        String input = "1";
+    public void inputMock(String input) {
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
     }
@@ -51,7 +50,7 @@ public class BibliotecaAppTest {
     public void shouldPrintAMainMenuOptions() {
         String message = "1.Book List\n2.Quit";
 
-        this.inputMock();
+        this.inputMock("1");
 
         app.mainMenu();
 
@@ -59,24 +58,33 @@ public class BibliotecaAppTest {
     }
 
     @Test
+    public void shouldReceiveInputFromUser() {
+        this.inputMock("1");
+
+        app.inputUser();
+
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("Choose your option: "));
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("you choose: 1"));
+    }
+
+    @Test
     public void mainMenuShouldReceiveInputFromUserAndPrintResultOfChoice() {
         String result = "book\nbook\nbook\nbook\nbook\nbook";
 
-        this.inputMock();
+        this.inputMock("1");
 
         app.mainMenu();
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString(result));
     }
 
-
     @Test
-    public void shouldReceiveInputFromUser() {
-        this.inputMock();
+    public void shouldDetectInvalidOption() {
+        this.inputMock("2");
 
-        app.inputUser();
+        app.mainMenu();
 
-        assertThat(outContent.toString().trim(), CoreMatchers.containsString("Choose your option: "));
-        assertThat(outContent.toString().trim(), CoreMatchers.containsString("you choose: 1"));
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("Select a valid option!"));
+
     }
 }
