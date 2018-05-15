@@ -48,9 +48,9 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldPrintAMainMenuOptions() {
-        String message = "1.Book List\n2.Quit";
+        String message = "1.Book List\n2.Quit\n3.Checkout Book";
 
-        this.inputMock("1");
+        this.inputMock("2");
 
         app.mainMenu();
 
@@ -95,5 +95,14 @@ public class BibliotecaAppTest {
         app.mainMenu();
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("You just Quit, GoodBye"));
+    }
+
+    @Test
+    public void shouldBeAbleToCheckOutABook() {
+        this.inputMock("3");
+
+        app.mainMenu();
+
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you! Enjoy the book"));
     }
 }

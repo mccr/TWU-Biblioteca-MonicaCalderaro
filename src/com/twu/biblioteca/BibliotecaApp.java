@@ -17,7 +17,7 @@ public class BibliotecaApp {
 
 
     public void mainMenu() {
-        String menu = "1.Book List\n2.Quit";
+        String menu = "1.Book List\n2.Quit\n3.Checkout Book";
         System.out.println(menu);
 
         String option = this.inputUser();
@@ -39,6 +39,10 @@ public class BibliotecaApp {
 
             case 2:
                 System.out.println("You just Quit, GoodBye");
+                break;
+
+            case 3:
+                System.out.println("Thank you! Enjoy the book");
                 break;
 
             default:
