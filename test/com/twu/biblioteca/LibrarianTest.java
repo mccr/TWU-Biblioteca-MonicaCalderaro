@@ -48,5 +48,8 @@ public class LibrarianTest {
 
     @Test
     public void shouldBeAbleToReturnBooks() {
+        librarian.returns(book);
+
+        assertEquals("book return", outContent.toString().trim());
     }
 }

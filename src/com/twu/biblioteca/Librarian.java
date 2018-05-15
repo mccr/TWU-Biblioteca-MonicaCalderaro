@@ -10,4 +10,8 @@ public class Librarian {
         }
 
     }
+
+    public void returns(Book book) {
+        System.out.println("book return");
+    }
 }

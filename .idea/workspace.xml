@@ -170,7 +170,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LibrarianTest.shouldBeAbleToShowAUnsuccessfulMessage">
+  <component name="RunManager" selected="JUnit.LibrarianTest.shouldBeAbleToReturnBooks">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -187,29 +187,6 @@
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
       <option name="METHOD_NAME" value="shouldBeAbleToCheckOutABook" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="BibliotecaAppTest.shouldPrintAMainMenuOptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="shouldPrintAMainMenuOptions" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -256,6 +233,29 @@
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibrarianTest" />
       <option name="METHOD_NAME" value="shouldBeAbleToCheckoutBookAndMarkItUnavailable" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="LibrarianTest.shouldBeAbleToReturnBooks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibrarianTest" />
+      <option name="METHOD_NAME" value="shouldBeAbleToReturnBooks" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -328,19 +328,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.BibliotecaAppTest.shouldPrintAMainMenuOptions" />
       <item itemvalue="JUnit.BibliotecaAppTest.shouldBeAbleToCheckOutABook" />
       <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToCheckoutBook" />
       <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToCheckoutBookAndMarkItUnavailable" />
       <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToShowAUnsuccessfulMessage" />
+      <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToReturnBooks" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToReturnBooks" />
         <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToShowAUnsuccessfulMessage" />
         <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToCheckoutBookAndMarkItUnavailable" />
         <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToCheckoutBook" />
         <item itemvalue="JUnit.BibliotecaAppTest.shouldBeAbleToCheckOutABook" />
-        <item itemvalue="JUnit.BibliotecaAppTest.shouldPrintAMainMenuOptions" />
       </list>
     </recent_temporary>
   </component>
