@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BibliotecaApp {
+    Librarian librarian;
 
     public static void main(String[] args) {
         BibliotecaApp library = new BibliotecaApp();
+        library.librarian = new Librarian();
         library.welcomeMessage();
         library.mainMenu();
     }
@@ -24,13 +26,10 @@ public class BibliotecaApp {
 
         switch (Integer.parseInt(option)) {
             case 1:
-                String result = "";
-                BookList bookList = new BookList();
-                ArrayList<Book> booksAvailable = bookList.getBooks();
-                for (Book book : booksAvailable) {
+
+                for (Book book : librarian.getBooks()) {
                     if (book.isAvailable == true) System.out.println(book.title);
                 }
-                System.out.println(result);
                 break;
 
             case 2:
@@ -38,7 +37,7 @@ public class BibliotecaApp {
                 break;
 
             case 3:
-
+                System.out.println("Thank you! Enjoy the book");
                 break;
 
             default:

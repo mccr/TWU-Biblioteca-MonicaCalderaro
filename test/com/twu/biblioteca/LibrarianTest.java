@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -21,11 +22,25 @@ public class LibrarianTest {
     }
 
     Librarian librarian;
+    ArrayList<Book> libraryBooks;
     Book book;
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         librarian = new Librarian();
+        libraryBooks = librarian.getBooks();
         book = new Book("book", "author", 2000);
+    }
+
+    @Test
+    public void shouldHaveAListOfBooks() {
+
+        assertEquals(6, libraryBooks.size());
+    }
+
+    @Test
+    public void shouldReturnTheStatusOfABook() {
+
+        assertEquals(true, libraryBooks.get(0).isAvailable);
     }
 
     @Test
