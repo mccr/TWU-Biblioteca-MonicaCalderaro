@@ -1,14 +1,17 @@
 package com.twu.biblioteca;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 
 public class BibliotecaAppTest {
@@ -34,13 +37,25 @@ public class BibliotecaAppTest {
     @Test
     public void shouldReturnAWelcomeMessage() {
         app.welcomeMessage();
-        assertEquals("welcome user", outContent.toString().trim());
+        assertEquals("Welcome to the main menu, choose an option:", outContent.toString().trim());
     }
 
     @Test
     public void shouldPrintAMainMenuOptions() {
-        String message = "Welcome to the main menu \n1.Book List\n2.Quit";
+        String message = "1.Book List\n2.Quit";
         app.mainMenu();
         assertEquals(message, outContent.toString().trim());
+    }
+
+    @Test
+    public void shouldReceiveInputFromUser() {
+        String input = "1";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+
+        app.inputUser();
+
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("Choose your option: "));
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("you choose: 1"));
     }
 }
