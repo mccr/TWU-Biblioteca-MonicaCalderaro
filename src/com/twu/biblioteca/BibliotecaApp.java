@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BibliotecaApp {
@@ -15,10 +16,27 @@ public class BibliotecaApp {
     }
 
 
-    public String mainMenu() {
-        System.out.println("1.Book List\n2.Quit");
+    public void mainMenu() {
+        String menu = "1.Book List\n2.Quit";
+        System.out.println(menu);
+
         String option = this.inputUser();
-        return option;
+        System.out.println(option);
+
+        switch (Integer.parseInt(option)) {
+            case 1:
+                String result = "";
+                BookList bookList = new BookList();
+                ArrayList<Book> booksAvailable = bookList.getBooks();
+                for (int i = 0; i < booksAvailable.size(); i++) {
+                    if (i == 0) {
+                        result = booksAvailable.get(0).title;
+                    } else {
+                        result += "\n"+booksAvailable.get(i).title;
+                    }
+                }
+                System.out.println(result);
+        }
     }
 
     public String inputUser() {

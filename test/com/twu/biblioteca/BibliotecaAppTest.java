@@ -9,6 +9,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
@@ -41,17 +42,18 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldPrintAMainMenuOptionsAndReceiveInputOption() {
+    public void shouldPrintAMainMenuOptionsAndReceiveInputOptionAndPrintTheResultOfTheChoice() {
         String message = "1.Book List\n2.Quit";
+        String result = "book\nbook\nbook\nbook\nbook\nbook";
 
         String input = "1";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        String option = app.mainMenu();
+        app.mainMenu();
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString(message));
-        assertEquals("1", option);
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString(result));
     }
 
     @Test
