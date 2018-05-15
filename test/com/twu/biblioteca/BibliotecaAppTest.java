@@ -31,7 +31,7 @@ public class BibliotecaAppTest {
 
     @Before
     public void setUp() {
-        app = new BibliotecaApp();
+        app = new BibliotecaApp(new Librarian());
     }
 
     @After
@@ -67,24 +67,19 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void mainMenuShouldReceiveInputFromUserAndPrintResultOfChoice() {
+    public void shouldPrintAListOfBooksAvailables() {
         String result = "book\nbook\nbook\nbook\nbook\nbook";
 
-        this.inputMock("1");
-
-        app.mainMenu();
+        app.chooseOptions("1");
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString(result));
     }
 
     @Test
     public void shouldDetectInvalidOption() {
-        this.inputMock("6");
-
-        app.mainMenu();
+        app.chooseOptions("6");
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("Select a valid option!"));
-
     }
 
     @Test
@@ -98,10 +93,15 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldBeAbleToCheckOutABook() {
-        this.inputMock("3");
-
-        app.mainMenu();
+        app.chooseOptions("3");
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you! Enjoy the book"));
+    }
+
+    @Test
+    public void shouldBeAbleToReturnABook() {
+        app.chooseOptions("4");
+
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you for returning the book."));
     }
 }

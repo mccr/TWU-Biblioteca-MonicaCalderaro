@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c007e154-4afc-4dff-ad1d-cf2396da0973" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/BibliotecaAppTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Librarian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BookListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BookListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/LibrarianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/LibrarianTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BibliotecaAppTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BibliotecaAppTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+            <state relative-caret-position="1470">
+              <caret line="102" column="28" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#810#811#0" expanded="true" />
@@ -33,37 +29,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+            <state relative-caret-position="262">
+              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Librarian.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Librarian.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
-              <folding>
-                <element signature="e#175#181#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LibrarianTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibrarianTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#227#228#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,7 +54,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>String</find>
-      <find />
+      <find>throws Exception</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,12 +67,12 @@
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/startTest.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Librarian.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/LibrarianTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookListTest.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/LibrarianTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
       </list>
     </option>
   </component>
@@ -179,7 +152,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BibliotecaApp">
+  <component name="RunManager" selected="JUnit.BibliotecaAppTest">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
       <module name="biblioteca" />
@@ -217,7 +190,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="BibliotecaAppTest.shouldPrintAMainMenuOptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecaAppTest.mainMenuShouldReceiveInputFromUserAndPrintResultOfChoice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -229,7 +202,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="shouldPrintAMainMenuOptions" />
+      <option name="METHOD_NAME" value="mainMenuShouldReceiveInputFromUserAndPrintResultOfChoice" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -240,7 +213,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="BookListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecaAppTest.shouldBeAbleToReturnABook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -251,9 +224,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BookListTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
+      <option name="METHOD_NAME" value="shouldBeAbleToReturnABook" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -263,7 +236,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="LibrarianTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecaAppTest.shouldDetectInvalidOption" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -274,9 +247,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibrarianTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
+      <option name="METHOD_NAME" value="shouldDetectInvalidOption" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -325,19 +298,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.BibliotecaAppTest.shouldPrintAMainMenuOptions" />
       <item itemvalue="Application.BibliotecaApp" />
-      <item itemvalue="JUnit.BookListTest" />
-      <item itemvalue="JUnit.LibrarianTest" />
       <item itemvalue="JUnit.BibliotecaAppTest" />
+      <item itemvalue="JUnit.BibliotecaAppTest.shouldBeAbleToReturnABook" />
+      <item itemvalue="JUnit.BibliotecaAppTest.shouldDetectInvalidOption" />
+      <item itemvalue="JUnit.BibliotecaAppTest.mainMenuShouldReceiveInputFromUserAndPrintResultOfChoice" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BibliotecaApp" />
         <item itemvalue="JUnit.BibliotecaAppTest" />
-        <item itemvalue="JUnit.LibrarianTest" />
-        <item itemvalue="JUnit.BookListTest" />
-        <item itemvalue="JUnit.BibliotecaAppTest.shouldPrintAMainMenuOptions" />
+        <item itemvalue="JUnit.BibliotecaAppTest.mainMenuShouldReceiveInputFromUserAndPrintResultOfChoice" />
+        <item itemvalue="Application.BibliotecaApp" />
+        <item itemvalue="JUnit.BibliotecaAppTest.shouldDetectInvalidOption" />
+        <item itemvalue="JUnit.BibliotecaAppTest.shouldBeAbleToReturnABook" />
       </list>
     </recent_temporary>
   </component>
@@ -355,35 +328,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailable - 2018.05.15 at 16h 45m 18s.xml">
-      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailable" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest - 2018.05.15 at 17h 36m 15s.xml">
+      <configuration name="BibliotecaAppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailable - 2018.05.15 at 16h 45m 39s.xml">
-      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailable" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest - 2018.05.15 at 17h 38m 57s.xml">
+      <configuration name="BibliotecaAppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailable - 2018.05.15 at 16h 45m 58s.xml">
-      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailable" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest - 2018.05.15 at 17h 39m 09s.xml">
+      <configuration name="BibliotecaAppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage - 2018.05.15 at 16h 46m 47s.xml">
-      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_shouldBeAbleToReturnABook - 2018.05.15 at 17h 41m 11s.xml">
+      <configuration name="BibliotecaAppTest.shouldBeAbleToReturnABook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage - 2018.05.15 at 16h 47m 26s.xml">
-      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_shouldBeAbleToReturnABook - 2018.05.15 at 17h 42m 02s.xml">
+      <configuration name="BibliotecaAppTest.shouldBeAbleToReturnABook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibrarianTest_shouldBeAbleToShowUnsuccessfulReturnMessage - 2018.05.15 at 16h 49m 18s.xml">
-      <configuration name="LibrarianTest.shouldBeAbleToShowUnsuccessfulReturnMessage" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_shouldDetectInvalidOption - 2018.05.15 at 17h 42m 09s.xml">
+      <configuration name="BibliotecaAppTest.shouldDetectInvalidOption" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibrarianTest_shouldBeAbleToShowUnsuccessfulReturnMessage - 2018.05.15 at 16h 49m 39s.xml">
-      <configuration name="LibrarianTest.shouldBeAbleToShowUnsuccessfulReturnMessage" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_shouldDetectInvalidOption - 2018.05.15 at 17h 42m 36s.xml">
+      <configuration name="BibliotecaAppTest.shouldDetectInvalidOption" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_shouldPrintAMainMenuOptions - 2018.05.15 at 16h 51m 33s.xml">
-      <configuration name="BibliotecaAppTest.shouldPrintAMainMenuOptions" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_shouldDetectInvalidOption - 2018.05.15 at 17h 44m 03s.xml">
+      <configuration name="BibliotecaAppTest.shouldDetectInvalidOption" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_shouldPrintAMainMenuOptions - 2018.05.15 at 16h 52m 03s.xml">
-      <configuration name="BibliotecaAppTest.shouldPrintAMainMenuOptions" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest - 2018.05.15 at 17h 51m 47s.xml">
+      <configuration name="BibliotecaAppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_shouldPrintAMainMenuOptions - 2018.05.15 at 16h 52m 19s.xml">
-      <configuration name="BibliotecaAppTest.shouldPrintAMainMenuOptions" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_mainMenuShouldReceiveInputFromUserAndPrintResultOfChoice - 2018.05.15 at 17h 53m 19s.xml">
+      <configuration name="BibliotecaAppTest.mainMenuShouldReceiveInputFromUserAndPrintResultOfChoice" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -392,18 +365,18 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32923076" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32923076" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32923076" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32923076" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.26190478" />
+      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.26190478" />
       <window_info id="Learn" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -424,7 +397,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -433,7 +406,8 @@
         <state relative-caret-position="180">
           <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -455,7 +429,8 @@
         <state relative-caret-position="165">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -565,18 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -597,16 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibrarianTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Librarian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -617,12 +570,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibrarianTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+        <state relative-caret-position="202">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+          <folding>
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="102" column="28" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
           </folding>
         </state>
       </provider>
