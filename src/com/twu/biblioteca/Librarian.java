@@ -12,6 +12,12 @@ public class Librarian {
     }
 
     public void returns(Book book) {
-        System.out.println("book return");
+        if (book.isAvailable == false) {
+            book.isAvailable = true;
+            System.out.println("Thank you for returning the book.");
+        } else {
+            System.out.println("That is not a valid book to return.");
+        }
+
     }
 }

@@ -38,7 +38,7 @@ public class LibrarianTest {
     }
 
     @Test
-    public void shouldBeAbleToShowAUnsuccessfulMessage() {
+    public void shouldBeAbleToShowAUnsuccessfulCheckoutMessage() {
         book.isAvailable = false;
 
         librarian.checkout(book);
@@ -47,9 +47,19 @@ public class LibrarianTest {
     }
 
     @Test
-    public void shouldBeAbleToReturnBooks() {
+    public void shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage() {
+        book.isAvailable = false;
+
         librarian.returns(book);
 
-        assertEquals("book return", outContent.toString().trim());
+        assertEquals("Thank you for returning the book.", outContent.toString().trim());
+        assertEquals(true, book.isAvailable);
+    }
+
+    @Test
+    public void shouldBeAbleToShowUnsuccessfulReturnMessage() {
+        librarian.returns(book);
+
+        assertEquals("That is not a valid book to return.", outContent.toString().trim());
     }
 }

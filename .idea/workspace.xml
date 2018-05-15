@@ -30,8 +30,8 @@
       <file leaf-file-name="LibrarianTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibrarianTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+            <state relative-caret-position="577">
+              <caret line="62" column="88" selection-start-line="62" selection-start-column="88" selection-end-line="62" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,8 +42,8 @@
       <file leaf-file-name="Librarian.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Librarian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+            <state relative-caret-position="240">
+              <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -72,7 +72,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>String</find>
-      <find />
+      <find>throws Exception</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,78 +170,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LibrarianTest.shouldBeAbleToReturnBooks">
+  <component name="RunManager" selected="JUnit.LibrarianTest.shouldBeAbleToShowUnsuccessfulReturnMessage">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="BibliotecaAppTest.shouldBeAbleToCheckOutABook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="shouldBeAbleToCheckOutABook" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="LibrarianTest.shouldBeAbleToCheckoutBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibrarianTest" />
-      <option name="METHOD_NAME" value="shouldBeAbleToCheckoutBook" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="LibrarianTest.shouldBeAbleToCheckoutBookAndMarkItUnavailable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibrarianTest" />
-      <option name="METHOD_NAME" value="shouldBeAbleToCheckoutBookAndMarkItUnavailable" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
     </configuration>
     <configuration name="LibrarianTest.shouldBeAbleToReturnBooks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
@@ -266,6 +197,52 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibrarianTest" />
+      <option name="METHOD_NAME" value="shouldBeAbleToReturnBooksAndMarkItAsAvailable" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibrarianTest" />
+      <option name="METHOD_NAME" value="shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="LibrarianTest.shouldBeAbleToShowAUnsuccessfulMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
@@ -279,6 +256,29 @@
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibrarianTest" />
       <option name="METHOD_NAME" value="shouldBeAbleToShowAUnsuccessfulMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="LibrarianTest.shouldBeAbleToShowUnsuccessfulReturnMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.LibrarianTest" />
+      <option name="METHOD_NAME" value="shouldBeAbleToShowUnsuccessfulReturnMessage" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -328,19 +328,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.BibliotecaAppTest.shouldBeAbleToCheckOutABook" />
-      <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToCheckoutBook" />
-      <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToCheckoutBookAndMarkItUnavailable" />
       <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToShowAUnsuccessfulMessage" />
       <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToReturnBooks" />
+      <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailable" />
+      <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage" />
+      <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToShowUnsuccessfulReturnMessage" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToShowUnsuccessfulReturnMessage" />
+        <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage" />
+        <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailable" />
         <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToReturnBooks" />
         <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToShowAUnsuccessfulMessage" />
-        <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToCheckoutBookAndMarkItUnavailable" />
-        <item itemvalue="JUnit.LibrarianTest.shouldBeAbleToCheckoutBook" />
-        <item itemvalue="JUnit.BibliotecaAppTest.shouldBeAbleToCheckOutABook" />
       </list>
     </recent_temporary>
   </component>
@@ -358,27 +358,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BibliotecaAppTest_shouldPrintAMainMenuOptions - 2018.05.15 at 15h 34m 50s.xml">
-      <configuration name="BibliotecaAppTest.shouldPrintAMainMenuOptions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_shouldPrintAMainMenuOptions - 2018.05.15 at 16h 04m 50s.xml">
-      <configuration name="BibliotecaAppTest.shouldPrintAMainMenuOptions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_shouldPrintAMainMenuOptions - 2018.05.15 at 16h 04m 58s.xml">
-      <configuration name="BibliotecaAppTest.shouldPrintAMainMenuOptions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_shouldPrintAMainMenuOptions - 2018.05.15 at 16h 05m 23s.xml">
-      <configuration name="BibliotecaAppTest.shouldPrintAMainMenuOptions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_shouldBeAbleToCheckOutABook - 2018.05.15 at 16h 08m 51s.xml">
-      <configuration name="BibliotecaAppTest.shouldBeAbleToCheckOutABook" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_shouldBeAbleToCheckOutABook - 2018.05.15 at 16h 09m 29s.xml">
-      <configuration name="BibliotecaAppTest.shouldBeAbleToCheckOutABook" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LibrarianTest_shouldBeAbleToCheckoutBook - 2018.05.15 at 16h 21m 50s.xml">
-      <configuration name="LibrarianTest.shouldBeAbleToCheckoutBook" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LibrarianTest_shouldBeAbleToCheckoutBookAndMarkItUnavailable - 2018.05.15 at 16h 24m 05s.xml">
       <configuration name="LibrarianTest.shouldBeAbleToCheckoutBookAndMarkItUnavailable" configurationId="JUnit" />
     </history-entry>
@@ -387,6 +366,27 @@
     </history-entry>
     <history-entry file="LibrarianTest_shouldBeAbleToCheckoutBookAndMarkItUnavailable - 2018.05.15 at 16h 39m 05s.xml">
       <configuration name="LibrarianTest.shouldBeAbleToCheckoutBookAndMarkItUnavailable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibrarianTest_shouldBeAbleToShowAUnsuccessfulMessage - 2018.05.15 at 16h 41m 22s.xml">
+      <configuration name="LibrarianTest.shouldBeAbleToShowAUnsuccessfulMessage" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooks - 2018.05.15 at 16h 44m 03s.xml">
+      <configuration name="LibrarianTest.shouldBeAbleToReturnBooks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailable - 2018.05.15 at 16h 45m 18s.xml">
+      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailable - 2018.05.15 at 16h 45m 39s.xml">
+      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailable - 2018.05.15 at 16h 45m 58s.xml">
+      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage - 2018.05.15 at 16h 46m 47s.xml">
+      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibrarianTest_shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage - 2018.05.15 at 16h 47m 26s.xml">
+      <configuration name="LibrarianTest.shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -427,7 +427,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -599,15 +599,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Librarian.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        <state relative-caret-position="240">
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibrarianTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+        <state relative-caret-position="577">
+          <caret line="62" column="88" selection-start-line="62" selection-start-column="88" selection-end-line="62" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
