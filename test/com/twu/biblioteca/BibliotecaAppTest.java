@@ -41,10 +41,17 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldPrintAMainMenuOptions() {
+    public void shouldPrintAMainMenuOptionsAndReceiveInputOption() {
         String message = "1.Book List\n2.Quit";
-        app.mainMenu();
-        assertEquals(message, outContent.toString().trim());
+
+        String input = "1";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+
+        String option = app.mainMenu();
+
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString(message));
+        assertEquals("1", option);
     }
 
     @Test

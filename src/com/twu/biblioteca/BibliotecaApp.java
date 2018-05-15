@@ -8,7 +8,6 @@ public class BibliotecaApp {
         BibliotecaApp library = new BibliotecaApp();
         library.welcomeMessage();
         library.mainMenu();
-        library.inputUser();
     }
 
     public void welcomeMessage() {
@@ -16,16 +15,19 @@ public class BibliotecaApp {
     }
 
 
-    public void mainMenu() {
+    public String mainMenu() {
         System.out.println("1.Book List\n2.Quit");
+        String option = this.inputUser();
+        return option;
     }
 
-    public void inputUser() {
+    public String inputUser() {
         System.out.println("Choose your option: ");
 
         Scanner scanner = new Scanner(System.in);
         String option = scanner.nextLine();
 
         System.out.println("you choose: " + option);
+        return option;
     }
 }
