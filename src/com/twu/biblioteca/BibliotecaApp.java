@@ -17,7 +17,7 @@ public class BibliotecaApp {
 
 
     public void mainMenu() {
-        String menu = "1.Book List\n2.Quit\n3.Checkout Book";
+        String menu = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return";
         System.out.println(menu);
 
         String option = this.inputUser();
@@ -27,12 +27,8 @@ public class BibliotecaApp {
                 String result = "";
                 BookList bookList = new BookList();
                 ArrayList<Book> booksAvailable = bookList.getBooks();
-                for (int i = 0; i < booksAvailable.size(); i++) {
-                    if (i == 0) {
-                        result = booksAvailable.get(0).title;
-                    } else {
-                        result += "\n"+booksAvailable.get(i).title;
-                    }
+                for (Book book : booksAvailable) {
+                    if (book.isAvailable == true) System.out.println(book.title);
                 }
                 System.out.println(result);
                 break;
@@ -42,7 +38,7 @@ public class BibliotecaApp {
                 break;
 
             case 3:
-                System.out.println("Thank you! Enjoy the book");
+
                 break;
 
             default:

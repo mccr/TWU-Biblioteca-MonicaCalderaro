@@ -47,7 +47,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldPrintAMainMenuOptions() {
-        String message = "1.Book List\n2.Quit\n3.Checkout Book";
+        String message = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return";
 
         this.inputMock("2");
 
