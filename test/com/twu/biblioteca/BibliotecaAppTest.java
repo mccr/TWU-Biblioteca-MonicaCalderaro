@@ -47,7 +47,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldPrintAMainMenuOptions() {
-        String message = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return";
+        String message = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book";
 
         this.inputMock("2");
 
@@ -68,7 +68,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldPrintAListOfBooksAvailables() {
-        String result = "book\nbook\nbook\nbook\nbook\nbook";
+        String result = "Java\nbook\nbook\nbook\nbook\nbook";
 
         app.chooseOptions("1");
 
@@ -93,6 +93,8 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldBeAbleToCheckOutABook() {
+        this.inputMock("Java");
+
         app.chooseOptions("3");
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you! Enjoy the book"));
@@ -100,6 +102,10 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldBeAbleToReturnABook() {
+        this.inputMock("Java");
+
+        app.librarian.books.get(0).isAvailable = false;
+
         app.chooseOptions("4");
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you for returning the book."));

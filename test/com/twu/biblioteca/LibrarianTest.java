@@ -8,7 +8,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
+import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class LibrarianTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -27,20 +29,19 @@ public class LibrarianTest {
     @Before
     public void setUp() {
         librarian = new Librarian();
-        libraryBooks = librarian.getBooks();
-        book = new Book("book", "author", 2000);
+        book = new Book("Java", "author", 2000);
     }
 
     @Test
     public void shouldHaveAListOfBooks() {
 
-        assertEquals(6, libraryBooks.size());
+        assertEquals(6, librarian.books.size());
     }
 
     @Test
     public void shouldReturnTheStatusOfABook() {
 
-        assertEquals(true, libraryBooks.get(0).isAvailable);
+        assertTrue(librarian.books.get(0).isAvailable);
     }
 
     @Test
@@ -49,12 +50,11 @@ public class LibrarianTest {
         librarian.checkout(book);
 
         assertEquals("Thank you! Enjoy the book", outContent.toString().trim());
-        assertEquals(false, book.isAvailable);
     }
 
     @Test
     public void shouldBeAbleToShowAUnsuccessfulCheckoutMessage() {
-        book.isAvailable = false;
+        book = null;
 
         librarian.checkout(book);
 
@@ -68,7 +68,6 @@ public class LibrarianTest {
         librarian.returns(book);
 
         assertEquals("Thank you for returning the book.", outContent.toString().trim());
-        assertEquals(true, book.isAvailable);
     }
 
     @Test
@@ -76,5 +75,12 @@ public class LibrarianTest {
         librarian.returns(book);
 
         assertEquals("That is not a valid book to return.", outContent.toString().trim());
+    }
+
+    @Test
+    public void shouldCheckForAnExistingBookInBookList() {
+        Book bookChecked = librarian.checkList("Java");
+
+        assertEquals("Java", bookChecked.title);
     }
 }

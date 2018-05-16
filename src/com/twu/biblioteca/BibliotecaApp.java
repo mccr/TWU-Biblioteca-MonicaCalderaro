@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BibliotecaApp {
-    private Librarian librarian;
-    private ArrayList<Book> booksAvailable = Librarian.getBooks();
+    Librarian librarian;
 
     public BibliotecaApp(Librarian librarian) {
         this.librarian = librarian;
@@ -24,7 +23,7 @@ public class BibliotecaApp {
 
     public void mainMenu() {
         boolean isAlive = true;
-        String menu = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return";
+        String menu = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book";
 
         while (isAlive) {
             System.out.println(menu);
@@ -48,10 +47,12 @@ public class BibliotecaApp {
     }
 
     public void chooseOptions(String choice) {
+        Book userBook;
+
         switch (Integer.parseInt(choice)) {
             case 1:
 
-                for (Book book : booksAvailable) {
+                for (Book book : librarian.books) {
                     if (book.isAvailable) System.out.println(book.title);
                 }
                 break;
@@ -61,17 +62,18 @@ public class BibliotecaApp {
                 break;
 
             case 3:
-                librarian.checkout(booksAvailable.get(0));
+                userBook = librarian.checkList(this.inputUser());
+                librarian.checkout(userBook);
                 break;
 
             case 4:
-                librarian.returns(booksAvailable.get(0));
+                userBook = librarian.checkList(this.inputUser());
+                librarian.returns(userBook);
                 break;
 
             default:
                 System.out.println("Select a valid option!");
                 break;
         }
-        System.out.println(booksAvailable.get(0).isAvailable);
     }
 }
