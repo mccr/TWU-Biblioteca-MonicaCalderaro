@@ -5,6 +5,7 @@ public class Movie {
     public String director;
     public int year;
     public int rating;
+    public boolean isAvailable = true;
 
     public Movie(String name, String director, int year, int rating) {
         this.name = name;

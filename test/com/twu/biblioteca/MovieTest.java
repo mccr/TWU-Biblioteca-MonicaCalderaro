@@ -14,4 +14,11 @@ public class MovieTest {
         assertEquals(2000, movie.year);
         assertEquals(10, movie.rating);
     }
+
+    @Test
+    public void shouldHaveAStatus() {
+        Movie movie = new Movie("Butterfly Effect", "Steven Spilberg", 2000, 10);
+
+        assertTrue(movie.isAvailable);
+    }
 }

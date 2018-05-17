@@ -8,6 +8,7 @@ public class Librarian {
 
     public Librarian() {
         this.bookList = this.getBooks();
+        this.movieList = this.getMovies();
     }
 
     public ArrayList<Book> getBooks() {
