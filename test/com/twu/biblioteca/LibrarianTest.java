@@ -79,7 +79,7 @@ public class LibrarianTest {
 
     @Test
     public void shouldCheckForAnExistingBookInBookList() {
-        Book bookChecked = librarian.checkListBook("Head First Java");
+        Book bookChecked = librarian.checkList("Head First Java");
 
         assertEquals("Head First Java", bookChecked.title);
     }
@@ -94,5 +94,24 @@ public class LibrarianTest {
         Movie movieChecked = librarian.checkListMovie("Butterfly Effect");
 
         assertEquals("Butterfly Effect", movieChecked.name);
+    }
+
+    @Test
+    public void shouldBeAbleToCheckoutMoviesAndMarkItUnavailableAndShowSuccessMessage() {
+        Movie movieChecked = librarian.checkListMovie("Butterfly Effect");
+
+        librarian.checkoutMovie(movieChecked);
+
+        assertEquals("Thank you! Enjoy the movie", outContent.toString().trim());
+        assertFalse(movieChecked.isAvailable);
+    }
+
+    @Test
+    public void shouldBeAbleToShowAUnsuccessfulCheckoutMovieMessage() {
+        Movie movie = null;
+
+        librarian.checkoutMovie(movie);
+
+        assertEquals("That movie is not available.", outContent.toString().trim());
     }
 }

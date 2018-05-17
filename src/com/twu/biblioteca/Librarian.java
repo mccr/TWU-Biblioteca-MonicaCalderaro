@@ -36,7 +36,7 @@ public class Librarian {
         return movieList;
     }
 
-    public Book checkListBook(String inputUser) {
+    public Book checkList(String inputUser) {
         Book book = null;
         for (Book bookAvailable : bookList) {
             if (inputUser.equals(bookAvailable.title)) book = bookAvailable;
@@ -73,5 +73,14 @@ public class Librarian {
 
     public void printMessage(String message) {
         System.out.println(message);
+    }
+
+    public void checkoutMovie(Movie movieChecked) {
+        if (movieChecked != null && movieChecked.isAvailable) {
+            movieChecked.isAvailable = false;
+            this.printMessage("Thank you! Enjoy the movie");
+        } else {
+            this.printMessage("That movie is not available.");
+        }
     }
 }
