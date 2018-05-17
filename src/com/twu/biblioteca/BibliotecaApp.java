@@ -76,6 +76,10 @@ public class BibliotecaApp {
                 librarian.returns(userBook);
                 break;
 
+            case 5:
+                this.printMessage("movie\nmovie\nmovie");
+                break;
+
             default:
                 this.printMessage("Select a valid option!");
                 break;

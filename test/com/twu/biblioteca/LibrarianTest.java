@@ -84,4 +84,8 @@ public class LibrarianTest {
         assertEquals("Head First Java", bookChecked.title);
     }
 
+    @Test
+    public void shouldHaveAListOfMovies() {
+        assertEquals(3, librarian.movieList.size());
+    }
 }

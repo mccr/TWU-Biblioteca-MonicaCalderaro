@@ -1,10 +1,9 @@
 package com.twu.biblioteca;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.TreeMap;
 
 public class Librarian {
+    ArrayList<Movie> movieList;
     ArrayList<Book> bookList;
 
     public Librarian() {
@@ -26,6 +25,14 @@ public class Librarian {
             bookList.get(i).year = years[i];
         }
         return bookList;
+    }
+
+    public ArrayList<Movie> getMovies() {
+        movieList = new ArrayList<Movie>();
+        for (int i = 0; i < 3; i++) {
+            movieList.add(new Movie("Butterfly Effect", "Steven Spilberg", 2000, 10));
+        }
+        return movieList;
     }
 
     public Book checkList(String inputUser) {
