@@ -76,12 +76,12 @@ public class BibliotecaApp {
                 break;
 
             case 3:
-                userBook = librarian.checkList(this.inputUser());
+                userBook = librarian.checkListBook(this.inputUser());
                 librarian.checkout(userBook);
                 break;
 
             case 4:
-                userBook = librarian.checkList(this.inputUser());
+                userBook = librarian.checkListBook(this.inputUser());
                 librarian.returns(userBook);
                 break;
 

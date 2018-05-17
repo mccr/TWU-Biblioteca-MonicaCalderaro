@@ -79,7 +79,7 @@ public class LibrarianTest {
 
     @Test
     public void shouldCheckForAnExistingBookInBookList() {
-        Book bookChecked = librarian.checkList("Head First Java");
+        Book bookChecked = librarian.checkListBook("Head First Java");
 
         assertEquals("Head First Java", bookChecked.title);
     }
@@ -87,5 +87,12 @@ public class LibrarianTest {
     @Test
     public void shouldHaveAListOfMovies() {
         assertEquals(3, librarian.movieList.size());
+    }
+
+    @Test
+    public void shouldCheckForAnExistingBookInMovieList() {
+        Movie movieChecked = librarian.checkListMovie("Butterfly Effect");
+
+        assertEquals("Butterfly Effect", movieChecked.name);
     }
 }

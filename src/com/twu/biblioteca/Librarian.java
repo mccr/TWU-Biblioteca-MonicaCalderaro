@@ -36,13 +36,20 @@ public class Librarian {
         return movieList;
     }
 
-    public Book checkList(String inputUser) {
+    public Book checkListBook(String inputUser) {
         Book book = null;
         for (Book bookAvailable : bookList) {
-            this.printMessage(bookAvailable.title);
             if (inputUser.equals(bookAvailable.title)) book = bookAvailable;
         }
         return book;
+    }
+
+    public Movie checkListMovie(String inputUser) {
+        Movie movie = null;
+        for (Movie movieAvailable : movieList) {
+            if (inputUser.equals(movieAvailable.name)) movie = movieAvailable;
+        }
+        return movie;
     }
 
     public void checkout(Book book) {
