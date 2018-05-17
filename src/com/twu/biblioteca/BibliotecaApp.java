@@ -19,7 +19,7 @@ public class BibliotecaApp {
 
     public void mainMenu() {
         boolean isActive = true;
-        String menu = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book";
+        String menu = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book\n5.Movie List";
 
         while (isActive) {
             this.printMessage(menu);
