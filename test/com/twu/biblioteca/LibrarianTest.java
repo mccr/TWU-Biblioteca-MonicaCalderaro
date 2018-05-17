@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
@@ -24,7 +23,6 @@ public class LibrarianTest {
     }
 
     Librarian librarian;
-    ArrayList<Book> libraryBooks;
     Book book;
     @Before
     public void setUp() {
@@ -35,13 +33,13 @@ public class LibrarianTest {
     @Test
     public void shouldHaveAListOfBooks() {
 
-        assertEquals(6, librarian.books.size());
+        assertEquals(6, librarian.bookList.size());
     }
 
     @Test
     public void shouldReturnTheStatusOfABook() {
 
-        assertTrue(librarian.books.get(0).isAvailable);
+        assertTrue(librarian.bookList.get(0).isAvailable);
     }
 
     @Test
@@ -50,6 +48,7 @@ public class LibrarianTest {
         librarian.checkout(book);
 
         assertEquals("Thank you! Enjoy the book", outContent.toString().trim());
+        assertFalse(book.isAvailable);
     }
 
     @Test
@@ -68,6 +67,7 @@ public class LibrarianTest {
         librarian.returns(book);
 
         assertEquals("Thank you for returning the book.", outContent.toString().trim());
+        assertTrue(book.isAvailable);
     }
 
     @Test
@@ -79,8 +79,8 @@ public class LibrarianTest {
 
     @Test
     public void shouldCheckForAnExistingBookInBookList() {
-        Book bookChecked = librarian.checkList("Java");
+        Book bookChecked = librarian.checkList("Head First Java");
 
-        assertEquals("Java", bookChecked.title);
+        assertEquals("Head First Java", bookChecked.title);
     }
 }
