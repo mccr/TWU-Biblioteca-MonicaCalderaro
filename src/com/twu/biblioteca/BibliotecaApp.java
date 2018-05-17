@@ -19,7 +19,7 @@ public class BibliotecaApp {
 
     public void mainMenu() {
         boolean isActive = true;
-        String menu = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book\n5.Movie List";
+        String menu = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book\n5.Movie List\n6.Checkout Movie";
 
         while (isActive) {
             this.printMessage(menu);
@@ -65,6 +65,7 @@ public class BibliotecaApp {
 
     public void chooseOptions(String choice) {
         Book userBook;
+        Movie userMovie;
 
         switch (Integer.parseInt(choice)) {
             case 1:
@@ -88,6 +89,10 @@ public class BibliotecaApp {
             case 5:
                 this.printMovieList();
                 break;
+
+            case 6:
+                userMovie = librarian.checkListMovie(this.inputUser());
+                librarian.checkoutMovie(userMovie);
 
             default:
                 this.printMessage("Select a valid option!");
