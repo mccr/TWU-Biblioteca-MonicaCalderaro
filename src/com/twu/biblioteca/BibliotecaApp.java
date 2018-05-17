@@ -53,6 +53,15 @@ public class BibliotecaApp {
         }
     }
 
+    public void printMovieList() {
+        System.out.format("%20s%20s%15s%15s\n", "Movie Name", "Movie Director", "Year Real.", "Rating");
+        for (Movie movie : librarian.movieList) {
+            if (movie.isAvailable) {
+                System.out.format("%20s%20s%15s%15s\n", movie.name, movie.director, movie.year, movie.rating);
+            }
+        }
+    }
+
 
     public void chooseOptions(String choice) {
         Book userBook;
@@ -77,7 +86,7 @@ public class BibliotecaApp {
                 break;
 
             case 5:
-                this.printMessage("movie\nmovie\nmovie");
+                this.printMovieList();
                 break;
 
             default:

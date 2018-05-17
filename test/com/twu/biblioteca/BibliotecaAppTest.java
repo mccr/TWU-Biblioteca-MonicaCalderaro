@@ -111,14 +111,14 @@ public class BibliotecaAppTest {
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you for returning the book."));
     }
 
-    @Test
-    public void shouldPrintAListOfMovies() {
-        this.inputMock("5");
-
-        String movies = "movie\nmovie\nmovie";
-
-        app.chooseOptions("5");
-
-        assertThat(outContent.toString().trim(), CoreMatchers.containsString(movies));
-    }
+//    @Test
+//    public void shouldPrintAListOfMovies() {
+//        this.inputMock("5");
+//
+//        String movies = "movie\nmovie\nmovie";
+//
+//        app.chooseOptions("5");
+//
+//        assertThat(outContent.toString().trim(), CoreMatchers.containsString(movies));
+//    }
 }
