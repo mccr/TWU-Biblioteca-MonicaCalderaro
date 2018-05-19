@@ -19,6 +19,6 @@ public class MovieTest {
     public void shouldHaveAStatus() {
         Movie movie = new Movie("Butterfly Effect", "Steven Spilberg", 2000, 10);
 
-        assertTrue(movie.isAvailable);
+        assertTrue(movie.isAvailable());
     }
 }

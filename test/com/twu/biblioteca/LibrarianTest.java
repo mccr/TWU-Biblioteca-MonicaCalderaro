@@ -39,7 +39,7 @@ public class LibrarianTest {
     @Test
     public void shouldReturnTheStatusOfABook() {
 
-        assertTrue(librarian.bookList.get(0).isAvailable);
+        assertTrue(librarian.bookList.get(0).isAvailable());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class LibrarianTest {
         librarian.checkout(book);
 
         assertEquals("Thank you! Enjoy the book", outContent.toString().trim());
-        assertFalse(book.isAvailable);
+        assertFalse(book.isAvailable());
     }
 
     @Test
@@ -57,31 +57,32 @@ public class LibrarianTest {
 
         librarian.checkout(book);
 
-        assertEquals("That book is not available.", outContent.toString().trim());
+        assertEquals("That item is not available.", outContent.toString().trim());
     }
 
     @Test
     public void shouldBeAbleToReturnBooksAndMarkItAsAvailableAndShowSuccessMessage() {
-        book.isAvailable = false;
+        book.updateAvailability();
 
         librarian.returns(book);
 
-        assertEquals("Thank you for returning the book.", outContent.toString().trim());
-        assertTrue(book.isAvailable);
+        assertEquals("Thank you for returning the book", outContent.toString().trim());
+        assertTrue(book.isAvailable());
     }
 
     @Test
     public void shouldBeAbleToShowUnsuccessfulReturnMessage() {
         librarian.returns(book);
 
-        assertEquals("That is not a valid book to return.", outContent.toString().trim());
+        assertEquals("That is not a valid item to return.", outContent.toString().trim());
     }
 
     @Test
     public void shouldCheckForAnExistingBookInBookList() {
-        Book bookChecked = librarian.checkList("Head First Java");
+        LibraryItem bookChecked = librarian.checkList("Head First Java", "book");
+        Book book = (Book) bookChecked;
 
-        assertEquals("Head First Java", bookChecked.title);
+        assertEquals("Head First Java", book.title);
     }
 
     @Test
@@ -91,27 +92,29 @@ public class LibrarianTest {
 
     @Test
     public void shouldCheckForAnExistingBookInMovieList() {
-        Movie movieChecked = librarian.checkListMovie("Butterfly Effect");
+        LibraryItem movieChecked = librarian.checkList("Butterfly Effect", "movie");
+        Movie movie = (Movie) movieChecked;
 
-        assertEquals("Butterfly Effect", movieChecked.name);
+        assertEquals("Butterfly Effect", movie.name);
     }
 
     @Test
     public void shouldBeAbleToCheckoutMoviesAndMarkItUnavailableAndShowSuccessMessage() {
-        Movie movieChecked = librarian.checkListMovie("Butterfly Effect");
+        LibraryItem movieChecked = librarian.checkList("Butterfly Effect", "movie");
+        Movie movie = (Movie) movieChecked;
 
-        librarian.checkoutMovie(movieChecked);
+        librarian.checkout(movieChecked);
 
         assertEquals("Thank you! Enjoy the movie", outContent.toString().trim());
-        assertFalse(movieChecked.isAvailable);
+        assertFalse(movie.isAvailable());
     }
 
     @Test
     public void shouldBeAbleToShowAUnsuccessfulCheckoutMovieMessage() {
-        Movie movie = null;
+        LibraryItem movieChecked = librarian.checkList("Butterfly", "movie");
 
-        librarian.checkoutMovie(movie);
+        librarian.checkout(movieChecked);
 
-        assertEquals("That movie is not available.", outContent.toString().trim());
+        assertEquals("That item is not available.", outContent.toString().trim());
     }
 }

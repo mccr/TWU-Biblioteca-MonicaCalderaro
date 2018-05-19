@@ -1,13 +1,12 @@
 package com.twu.biblioteca;
 
-public class Movie {
+public class Movie extends LibraryItem {
     public String name;
     public String director;
-    public int year;
     public int rating;
-    public boolean isAvailable = true;
 
     public Movie(String name, String director, int year, int rating) {
+        super("movie");
         this.name = name;
         this.director = director;
         this.year = year;

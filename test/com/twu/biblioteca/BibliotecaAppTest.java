@@ -77,7 +77,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldDetectInvalidOption() {
-        app.chooseOptions("6");
+        app.chooseOptions("7");
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("Select a valid option!"));
     }
@@ -104,11 +104,11 @@ public class BibliotecaAppTest {
     public void shouldBeAbleToReturnABook() {
         this.inputMock("Head First Java");
 
-        app.librarian.bookList.get(0).isAvailable = false;
+        app.librarian.bookList.get(0).updateAvailability();
 
         app.chooseOptions("4");
 
-        assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you for returning the book."));
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you for returning the book"));
     }
 
 //    @Test

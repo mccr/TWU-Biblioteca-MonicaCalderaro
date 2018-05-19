@@ -17,6 +17,6 @@ public class BookTest {
     @Test
     public void shouldHaveStatus() {
         Book book = new Book("Head First Java", "J. Rollings", 2007);
-        assertEquals(true, book.isAvailable);
+        assertEquals(true, book.isAvailable());
     }
 }

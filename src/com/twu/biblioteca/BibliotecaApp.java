@@ -47,7 +47,7 @@ public class BibliotecaApp {
     public void printBookList() {
         System.out.format("%15s%15s%15s\n", "Book Title", "Book Author", "Year Pub.");
         for (Book book : librarian.bookList) {
-            if (book.isAvailable) {
+            if (book.isAvailable()) {
                 System.out.format("%15s%15s%15s\n", book.title, book.author, book.year);
             }
         }
@@ -56,7 +56,7 @@ public class BibliotecaApp {
     public void printMovieList() {
         System.out.format("%20s%20s%15s%15s\n", "Movie Name", "Movie Director", "Year Real.", "Rating");
         for (Movie movie : librarian.movieList) {
-            if (movie.isAvailable) {
+            if (movie.isAvailable()) {
                 System.out.format("%20s%20s%15s%15s\n", movie.name, movie.director, movie.year, movie.rating);
             }
         }
@@ -64,8 +64,7 @@ public class BibliotecaApp {
 
 
     public void chooseOptions(String choice) {
-        Book userBook;
-        Movie userMovie;
+        LibraryItem item;
 
         switch (Integer.parseInt(choice)) {
             case 1:
@@ -77,13 +76,13 @@ public class BibliotecaApp {
                 break;
 
             case 3:
-                userBook = librarian.checkList(this.inputUser());
-                librarian.checkout(userBook);
+                item = librarian.checkList(this.inputUser(), "book");
+                librarian.checkout(item);
                 break;
 
             case 4:
-                userBook = librarian.checkList(this.inputUser());
-                librarian.returns(userBook);
+                item = librarian.checkList(this.inputUser(), "book");
+                librarian.returns(item);
                 break;
 
             case 5:
@@ -91,8 +90,8 @@ public class BibliotecaApp {
                 break;
 
             case 6:
-                userMovie = librarian.checkListMovie(this.inputUser());
-                librarian.checkoutMovie(userMovie);
+                item = librarian.checkList(this.inputUser(), "movie");
+                librarian.checkout(item);
 
             default:
                 this.printMessage("Select a valid option!");
