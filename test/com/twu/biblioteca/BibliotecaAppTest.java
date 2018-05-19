@@ -47,7 +47,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldPrintAMainMenuOptions() {
-        String message = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book\n5.Movie List\n6.Checkout Movie";
+        String message = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book\n5.Movie List\n6.Checkout Movie\n7.Return Movie";
 
         this.inputMock("2");
 
@@ -77,7 +77,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldDetectInvalidOption() {
-        app.chooseOptions("7");
+        app.chooseOptions("10");
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("Select a valid option!"));
     }
@@ -131,5 +131,16 @@ public class BibliotecaAppTest {
 
         assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you! Enjoy the movie"));
 
+    }
+
+    @Test
+    public void shouldBeAbleToReturnAMovie() {
+        this.inputMock("Butterfly Effect");
+
+        app.librarian.movieList.get(0).updateAvailability();
+
+        app.chooseOptions("7");
+
+        assertThat(outContent.toString().trim(), CoreMatchers.containsString("Thank you for returning the movie"));
     }
 }

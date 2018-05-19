@@ -19,7 +19,7 @@ public class BibliotecaApp {
 
     public void mainMenu() {
         boolean isActive = true;
-        String menu = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book\n5.Movie List\n6.Checkout Movie";
+        String menu = "1.Book List\n2.Quit\n3.Checkout Book\n4.Return Book\n5.Movie List\n6.Checkout Movie\n7.Return Movie";
 
         while (isActive) {
             this.printMessage(menu);
@@ -44,31 +44,30 @@ public class BibliotecaApp {
         return option;
     }
 
-    public void printBookList() {
-        System.out.format("%15s%15s%15s\n", "Book Title", "Book Author", "Year Pub.");
-        for (Book book : librarian.bookList) {
-            if (book.isAvailable()) {
-                System.out.format("%15s%15s%15s\n", book.title, book.author, book.year);
+    public void printList(String libraryItem) {
+        if (libraryItem.equals("book")) {
+            System.out.format("%15s%15s%15s\n", "Book Title", "Book Author", "Year Pub.");
+            for (Book book : librarian.bookList) {
+                if (book.isAvailable()) {
+                    System.out.format("%15s%15s%15s\n", book.title, book.author, book.year);
+                }
+            }
+        } else {
+            System.out.format("%20s%20s%15s%15s\n", "Movie Name", "Movie Director", "Year Real.", "Rating");
+            for (Movie movie : librarian.movieList) {
+                if (movie.isAvailable()) {
+                    System.out.format("%20s%20s%15s%15s\n", movie.name, movie.director, movie.year, movie.rating);
+                }
             }
         }
     }
-
-    public void printMovieList() {
-        System.out.format("%20s%20s%15s%15s\n", "Movie Name", "Movie Director", "Year Real.", "Rating");
-        for (Movie movie : librarian.movieList) {
-            if (movie.isAvailable()) {
-                System.out.format("%20s%20s%15s%15s\n", movie.name, movie.director, movie.year, movie.rating);
-            }
-        }
-    }
-
 
     public void chooseOptions(String choice) {
         LibraryItem item;
 
         switch (Integer.parseInt(choice)) {
             case 1:
-                this.printBookList();
+                this.printList("book");
                 break;
 
             case 2:
@@ -86,12 +85,18 @@ public class BibliotecaApp {
                 break;
 
             case 5:
-                this.printMovieList();
+                this.printList("movie");
                 break;
 
             case 6:
                 item = librarian.checkList(this.inputUser(), "movie");
                 librarian.checkout(item);
+                break;
+
+            case 7:
+                item = librarian.checkList(this.inputUser(), "movie");
+                librarian.returns(item);
+                break;
 
             default:
                 this.printMessage("Select a valid option!");
